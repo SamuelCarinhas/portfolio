@@ -31,4 +31,20 @@ section .header .title {
 
 section .header .image img {
     height: 12rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		filter: drop-shadow(0 5px 15px 0px rgba(0,0,0,0.6));
+		transform: translatey(0);
+	}
+	50% {
+		filter: drop-shadow(0 5px 15px 0px rgba(0,0,0,0.2));
+		transform: translatey(-1rem);
+	}
+	100% {
+		filter: drop-shadow(0 5px 15px 0px rgba(0,0,0,0.6));
+		transform: translatey(0);
+	}
 }

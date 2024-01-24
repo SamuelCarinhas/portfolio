@@ -15,6 +15,7 @@ export default function Section(props: ISection) {
                     </div>
                 </div>
             }
+            {props.children}
         </section>
     )
 }
