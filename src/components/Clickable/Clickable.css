@@ -1,0 +1,13 @@
+.clickable {
+    transition: all 0.05s ease-in-out;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    transition: all 0.05s ease-in-out;
+    transform: scale(1.2);
+}
+
+.clickable:hover * {
+    color: #C8A560;
+}
