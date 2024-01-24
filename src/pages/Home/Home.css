@@ -1,0 +1,22 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.home .hero {
+    background-color: #101012;
+}
+
+.home .about {
+    background-color: #1a1a1c;
+}
+
+.home .skills {
+    background-color: #34353a;
+}
+
+.home .projects {
+    background-color: #1a1a1c;
+}

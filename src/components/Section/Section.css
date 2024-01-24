@@ -1,0 +1,34 @@
+section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+section .header {
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+section.left .header {
+    flex-direction: row-reverse;
+}
+
+section .header .title {
+    font-size: 4rem;
+    color: #D3D3D3;
+}
+
+section .header .image img {
+    height: 12rem;
+}
