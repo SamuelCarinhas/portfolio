@@ -30,6 +30,7 @@ section .header .title {
 }
 
 section .header .image img {
+    margin-top: 1rem;
     height: 12rem;
     animation: float 6s ease-in-out infinite;
 }
