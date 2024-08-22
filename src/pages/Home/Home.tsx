@@ -3,6 +3,7 @@ import Section from '../../components/Section/Section'
 import './Home.css'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Clickable from '../../components/Clickable/Clickable'
+import About from "../../components/About/About.tsx";
 
 export default function Home() {
 
@@ -41,7 +42,8 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-            <Section id="first" className='left about' title='About' image='/about_icon.png'>
+            <Section id="first" className='left about-section' title='About' image='/about_icon.png'>
+                <About />
             </Section>
             <Section className='right skills' title='Skills' image='/skills_icon.png'>
             </Section>

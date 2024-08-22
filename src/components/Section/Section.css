@@ -1,14 +1,14 @@
 section {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding-left: 8rem;
     padding-right: 8rem;
     box-sizing: border-box;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
     position: relative;
-    scroll-snap-align: start;
 }
 
 section .header {
