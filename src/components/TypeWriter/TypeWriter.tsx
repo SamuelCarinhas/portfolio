@@ -20,6 +20,8 @@ export default function TypeWriter(props: ITypeWriter) {
                 setCurrentIndex(0);
             }, 2000);
         }
+
+        return () => clearTimeout(timeout);
     }, [currentIndex]);
 
     return (
