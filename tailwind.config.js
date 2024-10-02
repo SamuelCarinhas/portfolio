@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -25,12 +27,17 @@ export default {
         outfit: ['Outfit', 'sans-serif'],
       },
       animation: {
-        blink: 'blink 1s steps(1) infinite',
+        blink: 'blink 1s infinite',
+        float: 'float 5s ease-in-out infinite',
       },
       keyframes: {
         blink: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translatey(0px)' },
+          '50%': { transform: 'translatey(-20px)' },
         },
       },
     },
