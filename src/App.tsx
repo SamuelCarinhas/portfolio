@@ -9,6 +9,15 @@ import { useEffect, useState } from 'react'
 export default function App() {
 
     const [activeSection, setActiveSection] = useState<string>('home');
+    const [emailCopied, setEmailCopied] = useState<boolean>(false);
+
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText('samuelsantos.c.2001@gmail.com').then(() => {
+        setEmailCopied(true);
+        setTimeout(() => setEmailCopied(false), 2000);
+    });
+  };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -72,7 +81,7 @@ export default function App() {
                             </a>
                         </div>
                         <div className='flex flex-col text-lg text-black font-semibold'>
-                            <a href='#contact-me'>
+                            <a href='#contact'>
                                 <div className='border rounded-lg p-3 box-border border-gold shadow-gold-small w-fit bg-gold hover:text-gold hover:bg-transparent'>
                                     Contact Me
                                 </div>
@@ -171,11 +180,11 @@ export default function App() {
                     </div>
                 </div>
             </div>
-            <div id='portfolio' className="flex h-100dvh flex-col w-full bg-black md:pl-20 md:pr-20 pt-20 pb-20 pl-5 pr-5 gap-20 box-border">
+            <div id='portfolio' className="flex flex-col w-full bg-black md:pl-20 md:pr-20 pt-20 pb-20 pl-5 pr-5 gap-20 box-border">
                 <div className='flex flex-col w-full gap-10'>
                     <h1 className='text-5xl'>Portfolio</h1>
-                    <div className='flex flex-row flex-wrap gap-10'>
-                        <a href='https://pixel-judge.samuelcarinhas.com'>
+                    <div className='flex flex-row flex-wrap flex-grow gap-10'>
+                        <a href='https://samuelcarinhas.com'>
                             <div className='flex bg-gray w-96 h-96 p-4 box-border rounded-lg'>
                                 <div className='flex flex-col justify-between'>
                                     <span className='text-2xl text-gold'>Portfolio</span>
@@ -220,9 +229,15 @@ export default function App() {
             </div>
             <div id='contact' className="flex flex-col items-center w-full bg-black md:pl-20 md:pr-20 pt-20 pb-20 pl-5 pr-5 gap-5 box-border border-t-gold border-t-2 border-b-gold border-b-2">
                 <h1 className='absolute text-5xl -mt-28 bg-black w-fit pl-4 pr-4 box-border rounded-full'>Contact Me</h1>
-                <div className='flex flex-row bg-gray p-4 rounded-lg'>
+                <div className='flex flex-row bg-gray p-4 rounded-lg hover:cursor-pointer select-none' onClick={ copyToClipboard }>
                     <span className='flex flex-row gap-2 text-center items-center'><MdEmail />samuelsantos.c.2001@gmail.com</span>
                 </div>
+                {
+                    emailCopied &&
+                    <div className="absolute -mt-12 p-2 bg-gold text-white rounded-lg shadow-lg">
+                        Email copied to clipboard!
+                    </div>
+                }
             </div>
             <div className='flex h-80 items-end w-full justify-center'>
                 <span>Copyright &copy; 2024 samuelcarinhas.com</span>
