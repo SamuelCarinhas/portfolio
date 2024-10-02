@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import profile from './assets/images/perfil.png'
+import logo from './assets/images/logo.png'
 import TypeWriter from './components/TypeWriter/TypeWriter'
 
 export default function App() {
@@ -9,7 +10,7 @@ export default function App() {
             <div className="flex flex-col w-full min-h-100dvh justify-between h-100dvh">
                 <div className="flex flex-row box-border w-full justify-between items-center text-xl h-20">
                     <div className="text-3xl">
-                        Samuel
+                        <img src={logo} className='h-20 md:h-64shadow-gold' />
                     </div>
                     <div className="flex-row gap-10 hidden md:flex">
                         <span className="hover:text-gold hover:cursor-pointer text-gold">Home</span>
