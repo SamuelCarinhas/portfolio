@@ -21,6 +21,7 @@ export default {
       colors: {
         'gold': '#c8a560',
         'black': '#101012',
+        'gray': '#1e1e1e',
         'white': '#d3d3d3',
       },
       fontFamily: {
