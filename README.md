@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![React](https://img.shields.io/badge/React-18.2.0-61DAFB.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-007ACC.svg)
+![Vite](https://img.shields.io/badge/Vite-5.3.3-646CFF.svg)
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Project](#running-the-project)
 
-## Expanding the ESLint configuration
+## Overview 👋
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This is my personal portfolio website, built to showcase my projects, skills, and experience. The website is designed using modern web technologies to ensure fast load times, responsiveness, and a great user experience.
 
-- Configure the top-level `parserOptions` property like this:
+## Features 🛸
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Single Page Application**: Seamless navigation without page reloads.
+- **Responsive Design 🖥️📱**: Optimized for desktop, tablet, and mobile devices.
+- **Fast Loading ⚡**: Built with Vite for quick startup and instant hot-reloading during development.
+- **Type Safety**: Leveraging TypeScript to ensure robust and maintainable code.
+- **Dynamic Content**: Easily update your portfolio content by editing a simple configuration file.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started 🎬
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Prerequisites 📋
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (>= 14.x.x)
+- **npm** or **yarn**
+
+### Installation ⚙️
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/SamuelCarinhas/portfolio.git
+    cd portfolio
+    ```
+
+2. **Install dependencies:**
+
+    Using npm:
+    ```bash
+    npm install
+    ```
+
+### Running the Project ▶️
+
+To start the development server:
+
+```bash
+npm run dev
 ```
