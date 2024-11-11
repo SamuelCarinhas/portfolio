@@ -5,6 +5,8 @@ import TypeWriter from './components/TypeWriter/TypeWriter'
 import { LuDot } from 'react-icons/lu'
 import { MdEmail } from 'react-icons/md'
 import { useEffect, useState } from 'react'
+import Experience from './components/Experience'
+import cv from './assets/files/CV.pdf'
 
 export default function App() {
 
@@ -46,7 +48,7 @@ export default function App() {
     return (
         <div className="flex flex-col bg-black text-white font-outfit pb-10 pt-5">
             <div id='home' className="flex flex-col w-full min-h-100dvh justify-between h-100dvh md:pl-20 md:pr-20 pl-5 pr-5">
-                <div className="flex flex-row box-border w-full justify-between items-center text-xl h-20 fixed bg-black z-50 left-0 top-0 pl-20 pr-20 border-b-2 border-b-gold">
+                <div className="flex flex-row box-border w-full justify-between items-center text-xl h-20 fixed bg-black z-50 left-0 top-0 pl-20 pr-20 shadow-xl">
                     <div className="text-3xl">
                         <img src={logo} className='h-20 md:h-64shadow-gold' />
                     </div>
@@ -80,7 +82,12 @@ export default function App() {
                                 </div>
                             </a>
                         </div>
-                        <div className='flex flex-col text-lg text-black font-semibold'>
+                        <div className='flex flex-row gap-5 text-lg text-black font-semibold'>
+                            <a href = { cv } target = "_blank">
+                                <div className='border rounded-lg p-3 box-border border-gold shadow-gold-small w-fit bg-gold hover:text-gold hover:bg-transparent'>
+                                    Resume
+                                </div>
+                            </a>
                             <a href='#contact'>
                                 <div className='border rounded-lg p-3 box-border border-gold shadow-gold-small w-fit bg-gold hover:text-gold hover:bg-transparent'>
                                     Contact Me
@@ -112,16 +119,45 @@ export default function App() {
 
                     <h1 className='text-3xl'>Experience</h1>
                     <div className='flex flex-col'>
-                        <div className='flex flex-row items-center gap-5'>
-                            <div className='bg-gray p-2 w-28 rounded-lg flex justify-center items-center'>
-                                <span>2021 - 2021</span>
-                            </div>
-                            <div className='w-6 h-6 bg-gold rounded-full shadow-gold'></div>
-                            <span className='text-2xl'>Summer Internship</span>
-                        </div>
-                        <div className='flex flex-col gap-1 pb-5 pt-5 text-justify ml-36 border-l-gold border-l-2 pl-8'>
-                            <a className='text-xl text-gold text-glow-gold' href='https://www.ipn.pt/'>Instituto Pedro Nunes</a>
-                            <span className='text-lg'>
+                        <Experience
+                            date = '2022 - 2022'
+                            title = 'Instructor'
+                            company = 'After School'
+                            companyRef = 'https://treetree2.school/'
+                            body = {<>
+                                I provided guidance to young children in the Computer Architecture I course,
+                                organized by <a className='text-gold text-glow-gold' href='https://www.treetree2.org/'>treetree2</a> as part of the <a className='text-gold text-glow-gold' href='https://treetree2.school/'>After School</a> program. In this course,
+                                I worked closely with students, helping them understand fundamental concepts
+                                such as Boolean algebra, logic gates, and basic digital circuits. I taught
+                                them how to design simple circuits and explained the significance of these
+                                concepts in computer hardware. Through this experience, I honed my teaching
+                                and communication skills by simplifying complex topics for younger students.
+                                I also deepened my understanding of Boolean algebra and circuit design, gaining
+                                practical insights into how these principles underpin modern computing systems.
+                                Additionally, working with young learners improved my patience and ability to adapt
+                                explanations to different learning paces.
+                            </>}
+                        />
+                        <Experience
+                            date = '2021 - 2022'
+                            title = 'Python Software Developer'
+                            company = 'ZEGAMI / DCSL'
+                            companyRef = 'https://videntai.com/'
+                            body = {<>
+                                Four months job working as a python engineer for <a className='text-gold text-glow-gold' href='https://videntai.com/'>Zegami</a>,
+                                consulting <a className='text-gold text-glow-gold' href='https://www.one-beyond.com/'>DCSL</a>.
+                                During this time, I focused on developing and maintaining Python components, streamlining CI/CD
+                                pipelines, and ensuring smooth deployment processes. The role involved close collaboration within
+                                an agile team environment, where I contributed to iterative development cycles, regular code
+                                reviews, and cross-functional teamwork.
+                            </>}
+                        />
+                        <Experience
+                            date = '2021 - 2021'
+                            title = 'Summer Internship'
+                            company = 'Instituto Pedro Nunes'
+                            companyRef = 'https://www.ipn.pt/'
+                            body = {<>
                                 During a summer internship, I developed a project management
                                 website using Angular and Entity Framework. This platform
                                 enabled users to create, organize, and manage projects
@@ -133,50 +169,9 @@ export default function App() {
                                 components with a robust back-end powered by Entity Framework,
                                 ensuring seamless data handling and a user-friendly experience.
                                 This project honed my skills in full stack development and
-                                team collaboration.
-                            </span>
-                        </div>
-                        <div className='flex flex-row items-center gap-5'>
-                            <div className='bg-gray p-2 w-28 rounded-lg flex justify-center items-center'>
-                                <span>2021 - 2022</span>
-                            </div>
-                            <div className='w-6 h-6 bg-gold rounded-full shadow-gold'></div>
-                            <span className='text-2xl'>Python Software Developer</span>
-                        </div>
-                        <div className='flex flex-col gap-1 pb-5 pt-5 text-justify ml-36 border-l-gold border-l-2 pl-8'>
-                            <a className='text-xl text-gold text-glow-gold' href='https://videntai.com/'>ZEGAMI / DCSL</a>
-                            <span className='text-lg'>
-                                Four months job working as a python engineer for <a className='text-gold text-glow-gold' href='https://videntai.com/'>Zegami</a>,
-                                consulting <a className='text-gold text-glow-gold' href='https://www.one-beyond.com/'>DCSL</a>.
-                                During this time, I focused on developing and maintaining Python components, streamlining CI/CD
-                                pipelines, and ensuring smooth deployment processes. The role involved close collaboration within
-                                an agile team environment, where I contributed to iterative development cycles, regular code
-                                reviews, and cross-functional teamwork.
-                            </span>
-                        </div>
-                        <div className='flex flex-row items-center gap-5'>
-                            <div className='bg-gray p-2 w-28 rounded-lg flex justify-center items-center'>
-                                <span>2022 - 2022</span>
-                            </div>
-                            <div className='w-6 h-6 bg-gold rounded-full shadow-gold'></div>
-                            <span className='text-2xl'>Instructor</span>
-                        </div>
-                        <div className='flex flex-col gap-1 pb-5 pt-5 text-justify ml-36 border-l-gold border-l-2 pl-8'>
-                            <a className='text-xl text-gold text-glow-gold' href='https://treetree2.school/'>After School</a>
-                            <span className='text-lg'>
-                            I provided guidance to young children in the Computer Architecture I course,
-                            organized by <a className='text-gold text-glow-gold' href='https://www.treetree2.org/'>treetree2</a> as part of the <a className='text-gold text-glow-gold' href='https://treetree2.school/'>After School</a> program. In this course,
-                            I worked closely with students, helping them understand fundamental concepts
-                            such as Boolean algebra, logic gates, and basic digital circuits. I taught
-                            them how to design simple circuits and explained the significance of these
-                            concepts in computer hardware. Through this experience, I honed my teaching
-                            and communication skills by simplifying complex topics for younger students.
-                            I also deepened my understanding of Boolean algebra and circuit design, gaining
-                            practical insights into how these principles underpin modern computing systems.
-                            Additionally, working with young learners improved my patience and ability to adapt
-                            explanations to different learning paces.
-                            </span>
-                        </div>
+                                team collaboration.`
+                            </>}
+                        />
                     </div>
                 </div>
             </div>
